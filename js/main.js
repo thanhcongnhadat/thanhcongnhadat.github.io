@@ -8,7 +8,7 @@ jQuery(document).ready(function($) {
 
 	"use strict";
 
-	
+
 
 	var siteMenuClone = function() {
 
@@ -19,11 +19,11 @@ jQuery(document).ready(function($) {
 
 
 		setTimeout(function() {
-			
+
 			var counter = 0;
       $('.site-mobile-menu .has-children').each(function(){
         var $this = $(this);
-        
+
         $this.prepend('<span class="arrow-collapse collapsed">');
 
         $this.find('.arrow-collapse').attr({
@@ -49,8 +49,8 @@ jQuery(document).ready(function($) {
       } else {
         $this.addClass('active');
       }
-      e.preventDefault();  
-      
+      e.preventDefault();
+
     });
 
 		$(window).resize(function() {
@@ -75,7 +75,7 @@ jQuery(document).ready(function($) {
 				$('body').addClass('offcanvas-menu');
 				$this.addClass('active');
 			}
-		}) 
+		})
 
 		// click outisde offcanvas
 		$(document).mouseup(function(e) {
@@ -86,7 +86,7 @@ jQuery(document).ready(function($) {
 				}
 	    }
 		});
-	}; 
+	};
 	siteMenuClone();
 
 
@@ -158,34 +158,26 @@ jQuery(document).ready(function($) {
 
 
 	var siteCarousel = function () {
-		if ( $('.nonloop-block-13').length > 0 ) {
-			$('.nonloop-block-13').owlCarousel({
-		    center: false,
-		    items: 1,
-		    loop: true,
-				stagePadding: 0,
-		    margin: 20,
-		    nav: false,
-		    dots: true,
-				navText: ['<span class="icon-arrow_back">', '<span class="icon-arrow_forward">'],
-		    responsive:{
-	        600:{
-	        	margin: 20,
-	        	stagePadding: 0,
-	          items: 1
-	        },
-	        1000:{
-	        	margin: 20,
-	        	stagePadding: 0,
-	          items: 2
-	        },
-	        1200:{
-	        	margin: 20,
-	        	stagePadding: 0,
-	          items: 2
-	        }
-		    }
-			});
+		if ( $('.department-slider').length > 0 ) {
+			$('.department-slider').owlCarousel({
+        loop: true,
+        margin: 10,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        nav: true,
+        navText: ['<span class="icon-arrow_back">', '<span class="icon-arrow_forward">'],
+        smartSpeed: 1000,
+        responsiveClass: true,
+        responsive: {
+            0: { items: 1 },
+            576: { items: 1 },
+            768: { items: 2 },
+            992: { items: 3 },
+            1248: { items: 4 },
+            1520: { items: 5 }
+        }
+    	});
 		}
 
 		if ( $('.slide-one-item').length > 0 ) {
@@ -248,7 +240,7 @@ jQuery(document).ready(function($) {
 			    + '<span class="countdown-block"><span class="label">%S</span> sec</span>'));
 			});
 		}
-				
+
 	};
 	siteCountDown();
 
