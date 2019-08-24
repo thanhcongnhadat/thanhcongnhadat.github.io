@@ -223,21 +223,28 @@ jQuery(document).ready(function($) {
   };
   siteStellar();
 
-  if ($('#back-to-top').length) {
-    var scrollTrigger = 100, // px
-        backToTop = function () {
-            var scrollTop = $(window).scrollTop();
-            if (scrollTop > scrollTrigger) {
-                $('#back-to-top').addClass('show');
-            } else {
-                $('#back-to-top').removeClass('show');
-            }
-        };
+  var scrollTrigger = 100,
+    $topNavBar = $('#top-navbar'),
+    $backToTop = $('#back-to-top');
+
+  if ($backToTop.length) {
+    let backToTop = function () {
+      let scrollTop = $(window).scrollTop();
+      if (scrollTop > scrollTrigger) {
+        $topNavBar.addClass('show');
+        $backToTop.addClass('show');
+      } else {
+        $backToTop.removeClass('show');
+        $topNavBar.removeClass('show');
+      }
+    };
     backToTop();
+
     $(window).on('scroll', function () {
-        backToTop();
+      backToTop();
     });
-    $('#back-to-top').on('click', function (e) {
+
+    $backToTop.on('click', function (e) {
         e.preventDefault();
         $('html,body').animate({
             scrollTop: 0
