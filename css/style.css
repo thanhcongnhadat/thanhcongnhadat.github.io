@@ -28,6 +28,8 @@ ul {
   list-style: none
 }
 
+.nopadding { padding: 0 !important; margin: 0 !important;}
+
 .text-black {
   color: #000 !important; }
 .text-green { color: #7cbd1e; }
@@ -237,7 +239,7 @@ ul {
 
 /* Navbar */
 .site-navbar-top .site-logo {
-  font-size: 2rem; }
+  font-size: 1.9rem; }
 .site-logo img { width: 30px; }
 .site-navbar-wrap {
   position: relative;
