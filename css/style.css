@@ -1587,7 +1587,8 @@ p.blog_meta_list i { padding-right: 15px; }
     line-height: 36px;
     color: #7cbd1e;
     font-weight: 600;
-    transition: all 0.3s linear
+    transition: all 0.3s linear;
+    margin: 0;
 }
 
 .blog_details h4:hover {
