@@ -175,6 +175,23 @@ jQuery(document).ready(function($) {
       });
     }
 
+    if ( $('.center-slider').length > 0 ) {
+      $('.center-slider').owlCarousel({
+        loop:true,
+        margin:10,
+        center: true,
+        autoplay: true,
+        nav: true,
+        navText: ['<span class="icon-arrow_back">', '<span class="icon-arrow_forward">'],
+        responsiveClass: true,
+        responsive:{
+          0: { items: 1 },
+          576: { items: 1 },
+          768: { items: 2 },
+        }
+      });
+    }
+
     if ( $('.slide-one-item').length > 0 ) {
       $('.slide-one-item').owlCarousel({
         center: false,
